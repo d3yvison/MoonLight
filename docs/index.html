@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>MoonLight</title>
+</head>
+<body>
+    <header>    
+        <a href="#" class="logo">Moon</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="images\stars.png" id="stars">
+        <img src="images\moon.png" id="moon">
+        <img src="images\mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a> 
+        <img src="images\mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, at. Animi ullam, eos earum aut repellat est enim laudantium molestiae? Sequi dolore voluptatibus alias voluptas architecto laudantium enim animi quaerat. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate maiores quae aut ipsa quos temporibus recusandae neque voluptatem obcaecati asperiores tempore pariatur voluptates quidem nulla, fugit hic ipsum maxime quo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos, aliquid minima maiores facilis maxime quia in dolorum sit vel soluta asperiores eligendi. Labore rem accusamus assumenda odit doloremque aliquam.
+            <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto corporis porro maxime at, ad necessitatibus error tempora? Totam unde dolorem incidunt, magni illo praesentium animi, velit, qui excepturi in corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quis voluptatem culpa veritatis eaque blanditiis quod! Hic dolorem natus quae doloremque dignissimos delectus, reiciendis tempora laudantium, consectetur deserunt optio. Laboriosam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro itaque quia nobis. Officia porro qui at nemo, eius obcaecati corporis molestias eaque illum ipsum, quisquam officiis expedita consequatur alias dolores. <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab explicabo soluta officiis, perferendis eveniet incidunt tenetur provident recusandae illum libero, consectetur fugit harum deserunt eius? Numquam aliquam harum temporibus officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quisquam unde inventore distinctio ratione nobis cupiditate, ipsam omnis. Dicta tempore fugiat saepe commodi cumque quam recusandae reprehenderit quia odit. Reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, at. Animi ullam, eos earum aut repellat est enim laudantium molestiae? Sequi dolore voluptatibus alias voluptas architecto laudantium enim animi quaerat. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate maiores quae aut ipsa quos temporibus recusandae neque voluptatem obcaecati asperiores tempore pariatur voluptates quidem nulla, fugit hic ipsum maxime quo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos, aliquid minima maiores facilis maxime quia in dolorum sit vel soluta asperiores eligendi. Labore rem accusamus assumenda odit doloremque aliquam.
+            <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto corporis porro maxime at, ad necessitatibus error tempora? Totam unde dolorem incidunt, magni illo praesentium animi, velit, qui excepturi in corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quis voluptatem culpa veritatis eaque blanditiis quod! Hic dolorem natus quae doloremque dignissimos delectus, reiciendis tempora laudantium, consectetur deserunt optio. Laboriosam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro itaque quia nobis. Officia porro qui at nemo, eius obcaecati corporis molestias eaque illum ipsum, quisquam officiis expedita consequatur alias dolores. <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab explicabo soluta officiis, perferendis eveniet incidunt tenetur provident recusandae illum libero, consectetur fugit harum deserunt eius? Numquam aliquam harum temporibus officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quisquam unde inventore distinctio ratione nobis cupiditate, ipsam omnis. Dicta tempore fugiat saepe commodi cumque quam recusandae reprehenderit quia odit. Reprehenderit.
+        </p>
+        <a href="https://www.linkedin.com/in/deyvison-ferreira/">developed by Deyvison Ferreira</a>
+    </div>
+    <script type="text/javascript">
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value *0.5 + 'px';
+
+        })
+    </script>
+</body>
+</html>
